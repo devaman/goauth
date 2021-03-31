@@ -6,7 +6,7 @@ passport.use(
     new GoogleStrategy({
             clientID: "543976067689-nfovf61l74nb9n59lnda83sfj2um3qat.apps.googleusercontent.com",
             clientSecret: "Byu9oE_3zUpNZuT3xrngt4h9",
-            callbackURL: "http://localhost:8080/auth/google/callback"
+            callbackURL: process.env.NODE_ENV==="production"?"https://goauthheroku.herokuapp.com/auth/google/callback":"http://localhost:8080/auth/google/callback"
         },
         function(accessToken, refreshToken, profile, done) {
             process.nextTick(function() {
