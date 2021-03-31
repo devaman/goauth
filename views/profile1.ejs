@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #2f2c53;
+      color: white;
+    }
+
+    nav {
+      box-shadow: 0 0 rgb(245, 255, 54);
+      transition: all .6s ease-in-out;
+      font-family: Pacifico;
+      font-weight: 400;
+    }
+
+    .box {
+      position: relative;
+      margin: 40px auto 0px auto;
+      width: 392px;
+      max-width: 100vw;
+      height: 392px;
+    }
+
+    .name {
+      font-size: 2.3em;
+      font-weight: 900;
+    }
+
+    .details {
+      font-family: 'Poppins', sans-serif;
+
+    }
+
+    .p-image {
+      border: 4px solid #fb6c20;
+      border-left: 4px solid #2f2c53;
+      border-radius: 50%;
+      padding: 8px;
+      transform: rotateZ(30deg);
+    }
+
+    .p-image img {
+      transform: rotateZ(-30deg);
+      border-radius: 50%;
+
+    }
+
+    .email {
+      font-size: 1.2em;
+      font-weight: 300;
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="flex z-20 fixed left-0 top-0 right-0 justify-around h-10 items-center px-20"><a
+      class="brand font-bold text-2xl" href="/">Zappy</a>
+    <div><a href="https://devaman.dev/" class="mx-2">Portfolio</a>
+      <a href="/profile2" class="mx-2">Profile2</a>
+      <a href="/logout">Logout</a>
+    </div>
+  </nav>
+  <div class="flex justify-center mt-24 mb-10 items-center">
+    <div class="p-image inline-block overflow-hidden">
+      <img src="<%=picture%>" width=150 />
+    </div>
+    <!-- <div class="border-l h-full border-white">
+      <h2 class="text-lg text-gray-400">
+        <%=user.emails[0].value%>
+      </h2>
+    </div> -->
+  </div>
+  <div class="flex details flex-col items-center">
+    <div class="text-left">
+      <h1 class="font-bold text-4xl">
+        <%=user._json.given_name%>
+      </h1>
+      <h2 class="text-4xl text-gray-400 font-light">
+        <%=user._json.family_name%>
+      </h2>
+      <h2 class="text-lg text-gray-400">
+        <%=user.emails[0].value%>
+      </h2>
+  <a href="https://dribbble.com/shots/15276067-Fitness-Goals" class="text-xs">Template Link</a>
+
+    </div>
+
+  
+  </div>
+</body>
+
+</html>

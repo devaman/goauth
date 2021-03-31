@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;900&display=swap" rel="stylesheet">
+  <style>
+    body{
+      background-color: #f8fef8;
+    }
+    nav {
+      box-shadow: 0 0 rgb(245, 255, 54);
+      transition: all .6s ease-in-out;
+      font-family: Pacifico;
+      font-weight: 400;
+      background-color: rgba(255, 255, 255, 0.28);
+    }
+
+    .box {
+      position: relative;
+      margin: 40px auto 0px auto;
+      width: 392px;
+      max-width: 100vw;
+      height: 392px;
+      font-family: 'Work Sans', sans-serif;
+    }
+
+    .name {
+      font-size: 2.3em;
+      font-weight: 900;
+    }
+
+    .email {
+      font-size: 2em;
+      font-weight: 300;
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="flex z-20 fixed left-0 top-0 right-0 justify-around h-10 items-center px-20"><a
+      class="brand font-bold text-2xl" href="/">Zappy</a>
+    <div><a href="https://devaman.dev/" class="mx-4">Portfolio</a>
+      <a href="/" class="mx-2">Profile1</a>
+      <a href="/logout">Logout</a></div>
+  </nav>
+  <div class="box">
+    <div class="flex inset-0 flex-col absolute justify-center items-center h-full ">
+      <?xml version="1.0" encoding="UTF-8"?>
+      <?xml version="1.0" encoding="UTF-8"?>
+      <svg width="392px" height="392px" viewBox="0 0 397 392" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+        <title>Group</title>
+        <desc>Created with Sketch.</desc>
+        <defs>
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#8BFF55" offset="0%"></stop>
+            <stop stop-color="#FFE437" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Group" transform="translate(0.755630, 0.000000)">
+            <path
+              d="M114.010056,126.954712 C126.775742,103.124939 85.5755468,25.4840698 144.909958,10.37146 C204.24437,-4.7411499 166.184006,85.4814453 217.321702,85.4814453 C268.459397,85.4814453 252.29513,41.4928483 291.27501,44.763855 C330.254889,48.0348617 351.722546,76.2048365 366.50261,98 C381.282673,119.795164 331.776556,140.79158 339.040574,175.257446 C346.304592,209.723312 401.192582,208.758549 395.559067,235.865295 C389.925552,262.972042 317.284592,255.881104 317.284592,279.940552 C317.284592,304 339.013613,365.822562 317.284592,375 C295.555571,384.177438 247.905299,307.35791 222.94365,319.786255 C197.982,332.2146 231.023118,398.557251 181.578171,391.078857 C132.133225,383.600464 191.894363,319.114562 137.884385,297.99585 C83.8744058,276.877138 23.1230321,332.104553 2.99894765,288.792358 C-17.1251368,245.480164 70.3510785,242.821988 77.659348,209.795471 C84.9676176,176.768954 17.6334081,188.499634 36.534226,137.244385 C55.4350438,85.9891357 101.24437,150.784485 114.010056,126.954712 Z"
+              id="Path" fill="url(#linearGradient-1)"></path>
+            <path
+              d="M134.431019,312.052458 C134.431019,287.725743 110.196815,343.831405 113.565662,355.232411 C116.93451,366.633418 134.431019,382.851979 141.430042,370.668711 C148.429066,358.485444 134.431019,336.379173 134.431019,312.052458 Z"
+              id="Path-2" fill="#EFE83B"></path>
+            <path
+              d="M225.431019,6.05245777 C225.431019,-18.2742572 201.196815,37.8314046 204.565662,49.2324113 C207.93451,60.6334179 225.431019,76.8519787 232.430042,64.6687112 C239.429066,52.4854437 225.431019,30.3791727 225.431019,6.05245777 Z"
+              id="Path-2" fill="#9FFB50"
+              transform="translate(219.317069, 34.500000) scale(1, -1) translate(-219.317069, -34.500000) "></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="flex inset-0 flex-col absolute justify-center items-center h-full">
+      <img src="<%=picture%>" width=200 style="border-radius:50%;" />
+    </div>
+  </div>
+  <div class="text-center">
+    <h1 class="font-bold text-lg">
+      <%=user.displayName%>
+    </h1>
+    <h2 class="">
+      <%=user.emails[0].value%>
+    </h2>
+  <a href="https://www.behance.net/gallery/114033587/User-Profile-Page" class="text-xs">Template Link</a>
+
+  </div>
+
+</body>
+
+</html>
